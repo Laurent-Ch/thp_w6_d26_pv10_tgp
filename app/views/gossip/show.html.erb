@@ -9,12 +9,14 @@
   </head>
   
   <body>
+    <h1>Potin :</h1>
     <% id = @gossip.user.id %>
     <br />
     <p class="potin">Potin n° <%= @id%></p>
-    <div> <em>Auteur</em> : <%= @gossip.user.first_name %> <%= @gossip.user.last_name %></div>
-    <div> <em>Titre</em> : <%= @gossip.title %></div>
-    <div> <em>Contenu</em> : <%= @gossip.content %></div>
+    <br />
+    <div> <em>Auteur du potin</em> : <%= @gossip.user.first_name %> <%= @gossip.user.last_name %></div>
+    <div> <em>Titre du potin</em> : <%= @gossip.title %></div>
+    <div> <em>Contenu du potin</em> : <%= @gossip.content %></div>
     <div> <em>Date de création</em> : <%= @gossip.created_at %></div>
     <span><%= link_to "profil de l'auteur", user_path(id) %></span>
 
