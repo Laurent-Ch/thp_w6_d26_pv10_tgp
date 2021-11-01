@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <h1>The Gossip Project</h1>
+    <br />
+
+    <h2><em>Parcours les meilleurs potins du Bootcamp Game</em> :</h2>
+    <br />
+    <ul>
+      <% @gossips.each do |gossip| %>
+      <li>
+        <span>Titre :</span>
+        <%= gossip.title %>
+        <br />
+        <span>Auteur : </span>
+        <%= gossip.user.first_name%>
+        <br />
+        <span>Contenu : </span>
+        <%= gossip.content%>
+        <br />
+      </li>
+      <br />
+      <% end %>
+    </ul>
+
+  <script src="index.js"></script>
+  </body>
+</html>
+
+
