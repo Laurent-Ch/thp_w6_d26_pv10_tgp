@@ -12,17 +12,24 @@
     <h1>The Gossip Project</h1>
     <br />
 
-    <h2><em>Parcours les meilleurs potins du Bootcamp Game</em> :</h2>
+    <h2><em>Parcours les meilleurs potins du Bootcamp Game :</em></h2>
     <br />
     <ul>
       <% @gossips.each do |gossip| %>
       <li>
+        <% id = gossip.id %>
+        <span class="potin">Potin n° <%= id%></span>
+        <br />
         <span>Titre :</span>
         <%= gossip.title %>
         <br />
         <span>Auteur : </span>
         <%= gossip.user.first_name%>
         <br />
+        <span><%= link_to 'lien', gossip_path(id) %></span>
+        <br />
+
+
       </li>
       <br />
       <% end %>

@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gossip</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <br />
+    <p class="potin">Potin n° <%= @id%></p>
+    <br />
+    <div> <em>Auteur du potin</em> : <%= @gossip.user.first_name %> <%= @gossip.user.last_name %></div>
+    <div> <em>Titre du potin</em> : <%= @gossip.title %></div>
+    <div> <em>Contenu du potin</em> : <%= @gossip.content %></div>
+    <div> <em>Date de création</em> : <%= @gossip.created_at %></div>
+
+  <script src="index.js"></script>
+  </body>
+</html>
+
+
