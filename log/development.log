@@ -11,3 +11,970 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (40.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (45.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCity Load (30.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:2
+  [1m[36mGossip Load (34.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTag Load (26.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mDm Load (83.7ms)[0m  [1m[34mSELECT "dms".* FROM "dms"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mJoinTagGossip Load (92.1ms)[0m  [1m[34mSELECT "join_tag_gossips".* FROM "join_tag_gossips"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mJoinUserDm Load (34.5ms)[0m  [1m[34mSELECT "join_user_dms".* FROM "join_user_dms"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (43.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "East Emile"], ["zip_code", "14000"], ["created_at", "2021-11-01 08:48:23.205660"], ["updated_at", "2021-11-01 08:48:23.205660"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "West Leighfort"], ["zip_code", "68000"], ["created_at", "2021-11-01 08:48:23.252719"], ["updated_at", "2021-11-01 08:48:23.252719"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "North Jeanellefort"], ["zip_code", "64000"], ["created_at", "2021-11-01 08:48:23.255874"], ["updated_at", "2021-11-01 08:48:23.255874"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Loreneland"], ["zip_code", "08000"], ["created_at", "2021-11-01 08:48:23.260434"], ["updated_at", "2021-11-01 08:48:23.260434"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Feilhaven"], ["zip_code", "19000"], ["created_at", "2021-11-01 08:48:23.264873"], ["updated_at", "2021-11-01 08:48:23.264873"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Trantowland"], ["zip_code", "06000"], ["created_at", "2021-11-01 08:48:23.268805"], ["updated_at", "2021-11-01 08:48:23.268805"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luettgenport"], ["zip_code", "69000"], ["created_at", "2021-11-01 08:48:23.273964"], ["updated_at", "2021-11-01 08:48:23.273964"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Thea"], ["zip_code", "19000"], ["created_at", "2021-11-01 08:48:23.279668"], ["updated_at", "2021-11-01 08:48:23.279668"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Leroy"], ["zip_code", "23000"], ["created_at", "2021-11-01 08:48:23.285036"], ["updated_at", "2021-11-01 08:48:23.285036"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gradyfurt"], ["zip_code", "02000"], ["created_at", "2021-11-01 08:48:23.290405"], ["updated_at", "2021-11-01 08:48:23.290405"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (40.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Brandee"], ["last_name", "Purdy"], ["description", "Aut qui qui numquam."], ["email", "Brandee.Purdy@mail.com"], ["age", 61], ["city_id", 6], ["created_at", "2021-11-01 08:48:23.315951"], ["updated_at", "2021-11-01 08:48:23.315951"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mallie"], ["last_name", "Dach"], ["description", "Vel velit sit est."], ["email", "Mallie.Dach@mail.com"], ["age", 23], ["city_id", 10], ["created_at", "2021-11-01 08:48:23.364454"], ["updated_at", "2021-11-01 08:48:23.364454"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Erick"], ["last_name", "McCullough"], ["description", "Nihil est voluptatem cumque."], ["email", "Erick.McCullough@mail.com"], ["age", 72], ["city_id", 9], ["created_at", "2021-11-01 08:48:23.368365"], ["updated_at", "2021-11-01 08:48:23.368365"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Lou"], ["last_name", "Luettgen"], ["description", "Et voluptatem distinctio nisi."], ["email", "Lou.Luettgen@mail.com"], ["age", 24], ["city_id", 2], ["created_at", "2021-11-01 08:48:23.372543"], ["updated_at", "2021-11-01 08:48:23.372543"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Gigi"], ["last_name", "Homenick"], ["description", "Ut reprehenderit aut ut."], ["email", "Gigi.Homenick@mail.com"], ["age", 36], ["city_id", 2], ["created_at", "2021-11-01 08:48:23.377016"], ["updated_at", "2021-11-01 08:48:23.377016"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mathilde"], ["last_name", "Schinner"], ["description", "Molestiae nisi veritatis amet."], ["email", "Mathilde.Schinner@mail.com"], ["age", 58], ["city_id", 2], ["created_at", "2021-11-01 08:48:23.381971"], ["updated_at", "2021-11-01 08:48:23.381971"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Becky"], ["last_name", "Ruecker"], ["description", "Quo saepe labore sunt."], ["email", "Becky.Ruecker@mail.com"], ["age", 60], ["city_id", 10], ["created_at", "2021-11-01 08:48:23.386579"], ["updated_at", "2021-11-01 08:48:23.386579"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Delfina"], ["last_name", "Murazik"], ["description", "Eius omnis assumenda laboriosam."], ["email", "Delfina.Murazik@mail.com"], ["age", 72], ["city_id", 7], ["created_at", "2021-11-01 08:48:23.391028"], ["updated_at", "2021-11-01 08:48:23.391028"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Teddy"], ["last_name", "Little"], ["description", "Labore temporibus quas modi."], ["email", "Teddy.Little@mail.com"], ["age", 29], ["city_id", 10], ["created_at", "2021-11-01 08:48:23.395767"], ["updated_at", "2021-11-01 08:48:23.395767"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "description", "email", "age", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Garret"], ["last_name", "Marks"], ["description", "Ipsa sapiente aliquid delectus."], ["email", "Garret.Marks@mail.com"], ["age", 72], ["city_id", 4], ["created_at", "2021-11-01 08:48:23.399985"], ["updated_at", "2021-11-01 08:48:23.399985"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°0"], ["content", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["user_id", 8], ["created_at", "2021-11-01 08:48:23.411512"], ["updated_at", "2021-11-01 08:48:23.411512"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°1"], ["content", "No statement can catch the ChuckNorrisException."], ["user_id", 10], ["created_at", "2021-11-01 08:48:23.415402"], ["updated_at", "2021-11-01 08:48:23.415402"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°2"], ["content", "When Chuck Norris' code fails to compile the compiler apologises."], ["user_id", 5], ["created_at", "2021-11-01 08:48:23.418757"], ["updated_at", "2021-11-01 08:48:23.418757"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°3"], ["content", "Chuck Norris can access the DB from the UI."], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.424534"], ["updated_at", "2021-11-01 08:48:23.424534"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°4"], ["content", "Chuck Norris doesn't have disk latency because the hard drive knows to hurry the hell up."], ["user_id", 2], ["created_at", "2021-11-01 08:48:23.428984"], ["updated_at", "2021-11-01 08:48:23.428984"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°5"], ["content", "Chuck Norris can solve the Towers of Hanoi in one move."], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.433663"], ["updated_at", "2021-11-01 08:48:23.433663"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°6"], ["content", "Chuck Norris solved the Travelling Salesman problem in O(1) time."], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.438755"], ["updated_at", "2021-11-01 08:48:23.438755"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°7"], ["content", "Chuck Norris doesn't program with a keyboard. He stares the computer down until it does what he wants."], ["user_id", 10], ["created_at", "2021-11-01 08:48:23.443512"], ["updated_at", "2021-11-01 08:48:23.443512"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°8"], ["content", "Quantum cryptography does not work on Chuck Norris. When something is being observed by Chuck it stays in the same state until he's finished."], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.447187"], ["updated_at", "2021-11-01 08:48:23.447187"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°9"], ["content", "Chuck Norris went out of an infinite loop."], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.452378"], ["updated_at", "2021-11-01 08:48:23.452378"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°10"], ["content", "Chuck Norris rewrote the Google search engine from scratch."], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.456808"], ["updated_at", "2021-11-01 08:48:23.456808"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°11"], ["content", "Chuck Norris' protocol design method has no status, requests or responses, only commands."], ["user_id", 6], ["created_at", "2021-11-01 08:48:23.462753"], ["updated_at", "2021-11-01 08:48:23.462753"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°12"], ["content", "Chuck Norris does not use revision control software. None of his code has ever needed revision."], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.466995"], ["updated_at", "2021-11-01 08:48:23.466995"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°13"], ["content", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["user_id", 7], ["created_at", "2021-11-01 08:48:23.470844"], ["updated_at", "2021-11-01 08:48:23.470844"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°14"], ["content", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.474544"], ["updated_at", "2021-11-01 08:48:23.474544"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.4ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°15"], ["content", "Chuck Norris breaks RSA 128-bit encrypted codes in milliseconds."], ["user_id", 8], ["created_at", "2021-11-01 08:48:23.479271"], ["updated_at", "2021-11-01 08:48:23.479271"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°16"], ["content", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["user_id", 6], ["created_at", "2021-11-01 08:48:23.493097"], ["updated_at", "2021-11-01 08:48:23.493097"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°17"], ["content", "The programs that Chuck Norris writes don't have version numbers because he only writes them once. If a user reports a bug or has a feature request they don't live to see the sun set."], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.496406"], ["updated_at", "2021-11-01 08:48:23.496406"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°18"], ["content", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["user_id", 7], ["created_at", "2021-11-01 08:48:23.499584"], ["updated_at", "2021-11-01 08:48:23.499584"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGossip Create (0.4ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Potin n°19"], ["content", "Chuck Norris doesn't program with a keyboard. He stares the computer down until it does what he wants."], ["user_id", 8], ["created_at", "2021-11-01 08:48:23.503124"], ["updated_at", "2021-11-01 08:48:23.503124"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":grin:"], ["created_at", "2021-11-01 08:48:23.510472"], ["updated_at", "2021-11-01 08:48:23.510472"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":person_frowning:"], ["created_at", "2021-11-01 08:48:23.513606"], ["updated_at", "2021-11-01 08:48:23.513606"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":man_with_gua_pi_mao:"], ["created_at", "2021-11-01 08:48:23.516780"], ["updated_at", "2021-11-01 08:48:23.516780"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":haircut:"], ["created_at", "2021-11-01 08:48:23.520602"], ["updated_at", "2021-11-01 08:48:23.520602"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":worried:"], ["created_at", "2021-11-01 08:48:23.524596"], ["updated_at", "2021-11-01 08:48:23.524596"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":point_left:"], ["created_at", "2021-11-01 08:48:23.528019"], ["updated_at", "2021-11-01 08:48:23.528019"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":footprints:"], ["created_at", "2021-11-01 08:48:23.531178"], ["updated_at", "2021-11-01 08:48:23.531178"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":point_down:"], ["created_at", "2021-11-01 08:48:23.534720"], ["updated_at", "2021-11-01 08:48:23.534720"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":information_desk_person:"], ["created_at", "2021-11-01 08:48:23.538289"], ["updated_at", "2021-11-01 08:48:23.538289"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ":no_mouth:"], ["created_at", "2021-11-01 08:48:23.542132"], ["updated_at", "2021-11-01 08:48:23.542132"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[36mGossip Load (0.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ db/seeds.rb:52
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 1], ["tag_id", 7], ["created_at", "2021-11-01 08:48:23.552895"], ["updated_at", "2021-11-01 08:48:23.552895"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 1], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.556290"], ["updated_at", "2021-11-01 08:48:23.556290"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 2], ["tag_id", 9], ["created_at", "2021-11-01 08:48:23.559679"], ["updated_at", "2021-11-01 08:48:23.559679"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 2], ["tag_id", 2], ["created_at", "2021-11-01 08:48:23.563323"], ["updated_at", "2021-11-01 08:48:23.563323"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 3], ["tag_id", 5], ["created_at", "2021-11-01 08:48:23.566205"], ["updated_at", "2021-11-01 08:48:23.566205"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 3], ["tag_id", 5], ["created_at", "2021-11-01 08:48:23.568783"], ["updated_at", "2021-11-01 08:48:23.568783"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 4], ["tag_id", 9], ["created_at", "2021-11-01 08:48:23.571863"], ["updated_at", "2021-11-01 08:48:23.571863"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 4], ["tag_id", 6], ["created_at", "2021-11-01 08:48:23.575309"], ["updated_at", "2021-11-01 08:48:23.575309"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 5], ["tag_id", 5], ["created_at", "2021-11-01 08:48:23.578713"], ["updated_at", "2021-11-01 08:48:23.578713"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 6], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.582014"], ["updated_at", "2021-11-01 08:48:23.582014"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 6], ["tag_id", 2], ["created_at", "2021-11-01 08:48:23.584806"], ["updated_at", "2021-11-01 08:48:23.584806"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 7], ["tag_id", 1], ["created_at", "2021-11-01 08:48:23.587563"], ["updated_at", "2021-11-01 08:48:23.587563"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 8], ["tag_id", 1], ["created_at", "2021-11-01 08:48:23.590883"], ["updated_at", "2021-11-01 08:48:23.590883"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 8], ["tag_id", 1], ["created_at", "2021-11-01 08:48:23.594196"], ["updated_at", "2021-11-01 08:48:23.594196"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 9], ["tag_id", 2], ["created_at", "2021-11-01 08:48:23.597658"], ["updated_at", "2021-11-01 08:48:23.597658"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 9], ["tag_id", 8], ["created_at", "2021-11-01 08:48:23.600826"], ["updated_at", "2021-11-01 08:48:23.600826"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 10], ["tag_id", 4], ["created_at", "2021-11-01 08:48:23.603604"], ["updated_at", "2021-11-01 08:48:23.603604"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 10], ["tag_id", 10], ["created_at", "2021-11-01 08:48:23.606263"], ["updated_at", "2021-11-01 08:48:23.606263"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 11], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.609679"], ["updated_at", "2021-11-01 08:48:23.609679"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 12], ["tag_id", 7], ["created_at", "2021-11-01 08:48:23.612981"], ["updated_at", "2021-11-01 08:48:23.612981"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 13], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.616698"], ["updated_at", "2021-11-01 08:48:23.616698"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 13], ["tag_id", 5], ["created_at", "2021-11-01 08:48:23.620047"], ["updated_at", "2021-11-01 08:48:23.620047"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 14], ["tag_id", 8], ["created_at", "2021-11-01 08:48:23.623581"], ["updated_at", "2021-11-01 08:48:23.623581"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 15], ["tag_id", 7], ["created_at", "2021-11-01 08:48:23.626221"], ["updated_at", "2021-11-01 08:48:23.626221"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 16], ["tag_id", 1], ["created_at", "2021-11-01 08:48:23.628800"], ["updated_at", "2021-11-01 08:48:23.628800"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 16], ["tag_id", 8], ["created_at", "2021-11-01 08:48:23.631801"], ["updated_at", "2021-11-01 08:48:23.631801"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 17], ["tag_id", 2], ["created_at", "2021-11-01 08:48:23.634858"], ["updated_at", "2021-11-01 08:48:23.634858"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 17], ["tag_id", 8], ["created_at", "2021-11-01 08:48:23.638962"], ["updated_at", "2021-11-01 08:48:23.638962"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.3ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 18], ["tag_id", 7], ["created_at", "2021-11-01 08:48:23.642889"], ["updated_at", "2021-11-01 08:48:23.642889"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 19], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.645785"], ["updated_at", "2021-11-01 08:48:23.645785"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 20], ["tag_id", 3], ["created_at", "2021-11-01 08:48:23.648199"], ["updated_at", "2021-11-01 08:48:23.648199"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mJoinTagGossip Create (0.2ms)[0m  [1m[32mINSERT INTO "join_tag_gossips" ("gossip_id", "tag_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["gossip_id", 20], ["tag_id", 7], ["created_at", "2021-11-01 08:48:23.651145"], ["updated_at", "2021-11-01 08:48:23.651145"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.5ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Always pass on what you have learned."], ["sender_id", 1], ["created_at", "2021-11-01 08:48:23.659799"], ["updated_at", "2021-11-01 08:48:23.659799"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.2ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Once you start down the dark path, forever will it dominate your destiny, consume you it will."], ["sender_id", 2], ["created_at", "2021-11-01 08:48:23.663834"], ["updated_at", "2021-11-01 08:48:23.663834"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them do not. Miss them do not. Attachment leads to jealously. The shadow of greed, that is."], ["sender_id", 6], ["created_at", "2021-11-01 08:48:23.666657"], ["updated_at", "2021-11-01 08:48:23.666657"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Strong is Vader. Mind what you have learned. Save you it can."], ["sender_id", 7], ["created_at", "2021-11-01 08:48:23.670011"], ["updated_at", "2021-11-01 08:48:23.670011"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Feel the force!"], ["sender_id", 10], ["created_at", "2021-11-01 08:48:23.673872"], ["updated_at", "2021-11-01 08:48:23.673872"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Hmm. In the end, cowards are those who follow the dark side."], ["sender_id", 10], ["created_at", "2021-11-01 08:48:23.677478"], ["updated_at", "2021-11-01 08:48:23.677478"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.2ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "The dark side clouds everything. Impossible to see the future is."], ["sender_id", 9], ["created_at", "2021-11-01 08:48:23.680925"], ["updated_at", "2021-11-01 08:48:23.680925"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Mudhole? Slimy? My home this is!"], ["sender_id", 4], ["created_at", "2021-11-01 08:48:23.683741"], ["updated_at", "2021-11-01 08:48:23.683741"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.2ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Through the Force, things you will see. Other places. The future - the past. Old friends long gone."], ["sender_id", 4], ["created_at", "2021-11-01 08:48:23.686664"], ["updated_at", "2021-11-01 08:48:23.686664"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Create (0.3ms)[0m  [1m[32mINSERT INTO "dms" ("content", "sender_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Younglings, younglings gather ’round."], ["sender_id", 2], ["created_at", "2021-11-01 08:48:23.689995"], ["updated_at", "2021-11-01 08:48:23.689995"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDm Load (0.6ms)[0m  [1m[34mSELECT "dms".* FROM "dms"[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (1.6ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 2], ["recipient_id", 9], ["created_at", "2021-11-01 08:48:23.740832"], ["updated_at", "2021-11-01 08:48:23.740832"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 9], ["recipient_id", 4], ["created_at", "2021-11-01 08:48:23.745358"], ["updated_at", "2021-11-01 08:48:23.745358"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 8], ["recipient_id", 6], ["created_at", "2021-11-01 08:48:23.747990"], ["updated_at", "2021-11-01 08:48:23.747990"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 7], ["recipient_id", 7], ["created_at", "2021-11-01 08:48:23.751082"], ["updated_at", "2021-11-01 08:48:23.751082"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 7], ["recipient_id", 1], ["created_at", "2021-11-01 08:48:23.754165"], ["updated_at", "2021-11-01 08:48:23.754165"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 7], ["recipient_id", 4], ["created_at", "2021-11-01 08:48:23.757939"], ["updated_at", "2021-11-01 08:48:23.757939"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.4ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 5], ["recipient_id", 10], ["created_at", "2021-11-01 08:48:23.761833"], ["updated_at", "2021-11-01 08:48:23.761833"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 10], ["recipient_id", 7], ["created_at", "2021-11-01 08:48:23.766000"], ["updated_at", "2021-11-01 08:48:23.766000"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 3], ["recipient_id", 4], ["created_at", "2021-11-01 08:48:23.768634"], ["updated_at", "2021-11-01 08:48:23.768634"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 7], ["recipient_id", 10], ["created_at", "2021-11-01 08:48:23.771770"], ["updated_at", "2021-11-01 08:48:23.771770"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 10], ["recipient_id", 2], ["created_at", "2021-11-01 08:48:23.774815"], ["updated_at", "2021-11-01 08:48:23.774815"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 6], ["recipient_id", 2], ["created_at", "2021-11-01 08:48:23.777906"], ["updated_at", "2021-11-01 08:48:23.777906"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 3], ["recipient_id", 4], ["created_at", "2021-11-01 08:48:23.780952"], ["updated_at", "2021-11-01 08:48:23.780952"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 9], ["recipient_id", 2], ["created_at", "2021-11-01 08:48:23.783745"], ["updated_at", "2021-11-01 08:48:23.783745"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 4], ["recipient_id", 1], ["created_at", "2021-11-01 08:48:23.786234"], ["updated_at", "2021-11-01 08:48:23.786234"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 6], ["recipient_id", 8], ["created_at", "2021-11-01 08:48:23.789722"], ["updated_at", "2021-11-01 08:48:23.789722"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.4ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 10], ["recipient_id", 6], ["created_at", "2021-11-01 08:48:23.793128"], ["updated_at", "2021-11-01 08:48:23.793128"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 9], ["recipient_id", 5], ["created_at", "2021-11-01 08:48:23.796523"], ["updated_at", "2021-11-01 08:48:23.796523"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.2ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 7], ["recipient_id", 7], ["created_at", "2021-11-01 08:48:23.799652"], ["updated_at", "2021-11-01 08:48:23.799652"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mJoinUserDm Create (0.3ms)[0m  [1m[32mINSERT INTO "join_user_dms" ("dm_id", "recipient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["dm_id", 4], ["recipient_id", 2], ["created_at", "2021-11-01 08:48:23.802996"], ["updated_at", "2021-11-01 08:48:23.802996"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (27.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "To attempt an understanding of Muad'Dib without understanding his mortal enemies, the Harkonnens, is to attempt seeing Truth without knowing Falsehood. It is the attempt to see the Light without knowing Darkness. It cannot be."], ["gossip_id", 17], ["user_id", 3], ["created_at", "2021-11-01 08:48:23.818464"], ["updated_at", "2021-11-01 08:48:23.818464"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them."], ["gossip_id", 18], ["user_id", 6], ["created_at", "2021-11-01 08:48:23.851182"], ["updated_at", "2021-11-01 08:48:23.851182"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I made my peace gesture. The forms of kanly have been obeyed!"], ["gossip_id", 6], ["user_id", 10], ["created_at", "2021-11-01 08:48:23.855377"], ["updated_at", "2021-11-01 08:48:23.855377"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed."], ["gossip_id", 14], ["user_id", 6], ["created_at", "2021-11-01 08:48:23.858861"], ["updated_at", "2021-11-01 08:48:23.858861"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Think on it, Chani; the princess will have the name, yet she'll live as less than a concubine - never to know a moment of tenderness from the man to whom she's bound. While we, Chani, we who carry the name of concubine - history will call us wives."], ["gossip_id", 2], ["user_id", 6], ["created_at", "2021-11-01 08:48:23.862278"], ["updated_at", "2021-11-01 08:48:23.862278"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "In shield fighting, one moves fast on defense, slow on attack. Attack has the sole purpose of tricking the opponent into a misstep, setting him up for the attack sinister. The shield turns the fast blow, admits the slow kindjal!"], ["gossip_id", 7], ["user_id", 2], ["created_at", "2021-11-01 08:48:23.865703"], ["updated_at", "2021-11-01 08:48:23.865703"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "To save one from a mistake is a gift of paradise."], ["gossip_id", 11], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.868929"], ["updated_at", "2021-11-01 08:48:23.868929"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed."], ["gossip_id", 18], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.872659"], ["updated_at", "2021-11-01 08:48:23.872659"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "No more terrible disaster could befall your people than for them to fall into the hands of a Hero."], ["gossip_id", 5], ["user_id", 5], ["created_at", "2021-11-01 08:48:23.876187"], ["updated_at", "2021-11-01 08:48:23.876187"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I knew Yueh's wife. I was the one who broke his Imperial conditioning. I've thought of many pleasures with you. It is perhaps better that you die in the innards of a worm. Desire clouds my reason. That is not good. That is bad."], ["gossip_id", 10], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.879627"], ["updated_at", "2021-11-01 08:48:23.879627"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Bring in that floating fat man, the Baron!"], ["gossip_id", 6], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.884675"], ["updated_at", "2021-11-01 08:48:23.884675"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Motivating people, forcing them to your will, gives you a cynical attitude towards humanity. It degrades everything it touches."], ["gossip_id", 3], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.887808"], ["updated_at", "2021-11-01 08:48:23.887808"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Mood? What has mood to do with it? You fight when the necessity arises — no matter the mood! Mood's a thing for cattle or making love or playing the baliset. It's not for fighting."], ["gossip_id", 7], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.891184"], ["updated_at", "2021-11-01 08:48:23.891184"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "A human can control his instincts. Your instinct will be to draw your hand out of the box. You do, you die."], ["gossip_id", 19], ["user_id", 4], ["created_at", "2021-11-01 08:48:23.894763"], ["updated_at", "2021-11-01 08:48:23.894763"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "A popular man arouses the jealousy of the powerful."], ["gossip_id", 10], ["user_id", 7], ["created_at", "2021-11-01 08:48:23.898480"], ["updated_at", "2021-11-01 08:48:23.898480"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I knew Yueh's wife. I was the one who broke his Imperial conditioning. I've thought of many pleasures with you. It is perhaps better that you die in the innards of a worm. Desire clouds my reason. That is not good. That is bad."], ["gossip_id", 5], ["user_id", 5], ["created_at", "2021-11-01 08:48:23.902064"], ["updated_at", "2021-11-01 08:48:23.902064"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed."], ["gossip_id", 20], ["user_id", 9], ["created_at", "2021-11-01 08:48:23.905521"], ["updated_at", "2021-11-01 08:48:23.905521"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Use the first moments in study. You may miss an opportunity for quick victory this way, but the moments of study are insurance of success. Take your time and be sure."], ["gossip_id", 18], ["user_id", 1], ["created_at", "2021-11-01 08:48:23.908992"], ["updated_at", "2021-11-01 08:48:23.908992"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "The Guild... they're fighting me in the mental vaults. They're behind everything. They fear the one who will come, who will know more, who will see more. The Guild is behind everything. It's not finished yet. I'm not formed."], ["gossip_id", 3], ["user_id", 2], ["created_at", "2021-11-01 08:48:23.912303"], ["updated_at", "2021-11-01 08:48:23.912303"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "gossip_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I never could bring myself to trust a traitor. Not even a traitor I created."], ["gossip_id", 14], ["user_id", 5], ["created_at", "2021-11-01 08:48:23.916019"], ["updated_at", "2021-11-01 08:48:23.916019"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (46.0ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 18], ["created_at", "2021-11-01 08:48:23.930723"], ["updated_at", "2021-11-01 08:48:23.930723"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 1], ["created_at", "2021-11-01 08:48:23.981991"], ["updated_at", "2021-11-01 08:48:23.981991"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 17], ["created_at", "2021-11-01 08:48:23.987057"], ["updated_at", "2021-11-01 08:48:23.987057"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 12], ["created_at", "2021-11-01 08:48:23.990231"], ["updated_at", "2021-11-01 08:48:23.990231"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 4], ["created_at", "2021-11-01 08:48:23.994019"], ["updated_at", "2021-11-01 08:48:23.994019"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 20], ["created_at", "2021-11-01 08:48:23.997788"], ["updated_at", "2021-11-01 08:48:23.997788"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 14], ["created_at", "2021-11-01 08:48:24.001169"], ["updated_at", "2021-11-01 08:48:24.001169"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 2], ["created_at", "2021-11-01 08:48:24.004499"], ["updated_at", "2021-11-01 08:48:24.004499"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 15], ["created_at", "2021-11-01 08:48:24.007681"], ["updated_at", "2021-11-01 08:48:24.007681"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 15], ["created_at", "2021-11-01 08:48:24.010694"], ["updated_at", "2021-11-01 08:48:24.010694"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 15], ["created_at", "2021-11-01 08:48:24.013699"], ["updated_at", "2021-11-01 08:48:24.013699"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 6], ["created_at", "2021-11-01 08:48:24.016688"], ["updated_at", "2021-11-01 08:48:24.016688"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.2ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 1], ["created_at", "2021-11-01 08:48:24.019645"], ["updated_at", "2021-11-01 08:48:24.019645"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 1], ["created_at", "2021-11-01 08:48:24.022670"], ["updated_at", "2021-11-01 08:48:24.022670"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 3], ["created_at", "2021-11-01 08:48:24.025610"], ["updated_at", "2021-11-01 08:48:24.025610"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 18], ["created_at", "2021-11-01 08:48:24.028549"], ["updated_at", "2021-11-01 08:48:24.028549"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 18], ["created_at", "2021-11-01 08:48:24.031682"], ["updated_at", "2021-11-01 08:48:24.031682"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 16], ["created_at", "2021-11-01 08:48:24.035252"], ["updated_at", "2021-11-01 08:48:24.035252"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("comment_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["comment_id", 12], ["created_at", "2021-11-01 08:48:24.038518"], ["updated_at", "2021-11-01 08:48:24.038518"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mLike Create (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("gossip_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["gossip_id", 5], ["created_at", "2021-11-01 08:48:24.041877"], ["updated_at", "2021-11-01 08:48:24.041877"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTag Load (8.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mDm Load (0.6ms)[0m  [1m[34mSELECT "dms".* FROM "dms"[0m
+  [1m[36mJoinTagGossip Load (0.7ms)[0m  [1m[34mSELECT "join_tag_gossips".* FROM "join_tag_gossips"[0m
+  [1m[36mJoinUserDm Load (0.6ms)[0m  [1m[34mSELECT "join_user_dms".* FROM "join_user_dms"[0m
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mLike Load (1.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
