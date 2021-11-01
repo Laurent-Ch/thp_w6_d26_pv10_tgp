@@ -9,6 +9,8 @@
   </head>
   
   <body>
+    <% id = @gossip.user.id %>
+    
     <br />
     <p class="potin">Potin n° <%= @id%></p>
     <br />
@@ -16,6 +18,7 @@
     <div> <em>Titre du potin</em> : <%= @gossip.title %></div>
     <div> <em>Contenu du potin</em> : <%= @gossip.content %></div>
     <div> <em>Date de création</em> : <%= @gossip.created_at %></div>
+    <span><%= link_to "profil de l'auteur", user_path(id) %></span>
 
   <script src="index.js"></script>
   </body>
