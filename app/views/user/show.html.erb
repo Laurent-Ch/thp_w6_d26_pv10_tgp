@@ -16,6 +16,25 @@
      <div> <em>Ville</em> : <%= @user.city.name %></div>
     <div> <em>Description</em> : <%= @user.description %></div>
      <div> <em>Email</em> : <%= @user.email %></div>
+     <br />
+     <div class="emphasis">Tous les potins de <%= @user.first_name %> :</div>
+     <br />
+     <ul>
+      <% @user_gossips.each do |gossip| %>
+      <li>
+        <% id = gossip.id %>
+        <span class="potin">Potin n° <%= id%></span>
+        <br />
+        <span><em>Titre</em> :</span>
+        <%= gossip.title %>
+        <br />
+        <span><em>Contenu :</em> </span>
+        <%= gossip.content%>
+        <br />
+      </li>
+      <br />
+      <% end %>
+    </ul>
 
   <script src="index.js"></script>
   </body>
