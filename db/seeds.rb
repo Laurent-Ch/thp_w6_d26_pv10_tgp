@@ -33,8 +33,8 @@ users_array = User.all
 # Gossips
 20.times do |i|
   Gossip.create!(
-    title:"Potin n°#{i}",
-    content:Faker::ChuckNorris.fact,
+    title: Faker::Movie.unique.title,
+    content: Faker::ChuckNorris.fact,
     user:users_array[rand(0..9)]
   )
 end
